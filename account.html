@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Nike Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">NIKE</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Products ▼</button>
+                    <div class="dropdown-content">
+                        <a href="products.html?category=running">Running</a>
+                        <a href="products.html?category=basketball">Basketball</a>
+                        <a href="products.html?category=soccer">Soccer</a>
+                        <a href="products.html?category=training">Training</a>
+                        <a href="products.html?category=lifestyle">Lifestyle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="cart.html" class="nav-link cart-icon">🛒 Cart <span class="cart-count">0</span></a>
+                <a href="account.html" class="nav-link">👤 Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Account Section -->
+    <section class="account-section">
+        <div class="account-container">
+            <div class="account-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                <button class="tab-btn" onclick="switchTab('register')">Register</button>
+                <button class="tab-btn" onclick="switchTab('profile')">My Profile</button>
+                <button class="tab-btn" onclick="switchTab('orders')">My Orders</button>
+            </div>
+
+            <!-- Login Tab -->
+            <div id="login" class="tab-content active">
+                <h2>Login to Your Account</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+
+            <!-- Register Tab -->
+            <div id="register" class="tab-content">
+                <h2>Create a New Account</h2>
+                <form onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name:</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Email:</label>
+                        <input type="email" id="reg-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Password:</label>
+                        <input type="password" id="reg-password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm">Confirm Password:</label>
+                        <input type="password" id="reg-confirm" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+
+            <!-- Profile Tab -->
+            <div id="profile" class="tab-content">
+                <h2>My Profile</h2>
+                <div id="profileInfo" class="profile-info">
+                    <p>Please login to view your profile.</p>
+                </div>
+                <button class="btn btn-secondary" onclick="handleLogout()">Logout</button>
+            </div>
+
+            <!-- Orders Tab -->
+            <div id="orders" class="tab-content">
+                <h2>My Orders</h2>
+                <div id="ordersInfo" class="orders-info">
+                    <p>Please login to view your orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Nike Store. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

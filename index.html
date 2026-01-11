@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Store - Just Do It</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">NIKE</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Products ▼</button>
+                    <div class="dropdown-content">
+                        <a href="products.html?category=running">Running</a>
+                        <a href="products.html?category=basketball">Basketball</a>
+                        <a href="products.html?category=soccer">Soccer</a>
+                        <a href="products.html?category=training">Training</a>
+                        <a href="products.html?category=lifestyle">Lifestyle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="cart.html" class="nav-link cart-icon">🛒 Cart <span class="cart-count">0</span></a>
+                <a href="account.html" class="nav-link">👤 Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Just Do It</h1>
+            <p>Discover the latest collection of premium athletic wear</p>
+            <a href="products.html" class="btn btn-primary">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a6f);">
+                    <span class="product-badge">NEW</span>
+                </div>
+                <h3>Air Max 90</h3>
+                <p class="category">Running</p>
+                <p class="price">$129.99</p>
+                <button class="btn btn-secondary" onclick="addToCart('Air Max 90', 129.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #4ecdc4, #44a08d);">
+                    <span class="product-badge">SALE</span>
+                </div>
+                <h3>Jordan 1 Retro</h3>
+                <p class="category">Basketball</p>
+                <p class="price">$169.99</p>
+                <button class="btn btn-secondary" onclick="addToCart('Jordan 1 Retro', 169.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <span class="product-badge">HOT</span>
+                </div>
+                <h3>Phantom GT</h3>
+                <p class="category">Soccer</p>
+                <p class="price">$149.99</p>
+                <button class="btn btn-secondary" onclick="addToCart('Phantom GT', 149.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <span class="product-badge">NEW</span>
+                </div>
+                <h3>Metcon 8</h3>
+                <p class="category">Training</p>
+                <p class="price">$139.99</p>
+                <button class="btn btn-secondary" onclick="addToCart('Metcon 8', 139.99)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <a href="products.html?category=running" class="category-box">
+                <div class="category-icon">🏃</div>
+                <h3>Running</h3>
+            </a>
+            <a href="products.html?category=basketball" class="category-box">
+                <div class="category-icon">🏀</div>
+                <h3>Basketball</h3>
+            </a>
+            <a href="products.html?category=soccer" class="category-box">
+                <div class="category-icon">⚽</div>
+                <h3>Soccer</h3>
+            </a>
+            <a href="products.html?category=training" class="category-box">
+                <div class="category-icon">💪</div>
+                <h3>Training</h3>
+            </a>
+            <a href="products.html?category=lifestyle" class="category-box">
+                <div class="category-icon">👟</div>
+                <h3>Lifestyle</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Nike Store. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

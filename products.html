@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Nike Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">NIKE</a>
+            </div>
+            <div class="nav-center">
+                <a href="index.html" class="nav-link">Home</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">Products ▼</button>
+                    <div class="dropdown-content">
+                        <a href="products.html?category=running">Running</a>
+                        <a href="products.html?category=basketball">Basketball</a>
+                        <a href="products.html?category=soccer">Soccer</a>
+                        <a href="products.html?category=training">Training</a>
+                        <a href="products.html?category=lifestyle">Lifestyle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <a href="cart.html" class="nav-link cart-icon">🛒 Cart <span class="cart-count">0</span></a>
+                <a href="account.html" class="nav-link">👤 Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="products-header">
+            <h1 id="category-title">All Products</h1>
+            <div class="filter-bar">
+                <select id="categoryFilter" onchange="filterProducts()">
+                    <option value="">All Categories</option>
+                    <option value="running">Running</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="training">Training</option>
+                    <option value="lifestyle">Lifestyle</option>
+                </select>
+                <select id="priceFilter" onchange="filterProducts()">
+                    <option value="">All Prices</option>
+                    <option value="0-100">Under $100</option>
+                    <option value="100-150">$100 - $150</option>
+                    <option value="150-200">$150 - $200</option>
+                    <option value="200+">$200+</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Nike Store. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
