@@ -46,10 +46,10 @@ function updateCartSummary() {
     const taxEl = document.getElementById('tax');
     const totalEl = document.getElementById('total');
     
-    if (subtotalEl) subtotalEl.textContent = '$' + subtotal.toFixed(2);
-    if (shippingEl) shippingEl.textContent = '$' + shipping.toFixed(2);
-    if (taxEl) taxEl.textContent = '$' + tax.toFixed(2);
-    if (totalEl) totalEl.textContent = '$' + total.toFixed(2);
+    if (subtotalEl) subtotalEl.textContent = 'Rs.' + subtotal.toFixed(2);
+    if (shippingEl) shippingEl.textContent = 'Rs.' + shipping.toFixed(2);
+    if (taxEl) taxEl.textContent = 'Rs.' + tax.toFixed(2);
+    if (totalEl) totalEl.textContent = 'Rs.' + total.toFixed(2);
 }
 
 // Initialize cart page
