@@ -1,85 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Nike Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-left">
-                <a href="index.html" class="logo">NIKE</a>
+                <a href="index.html" class="logo">Gen-Z Sports</a>
             </div>
             <div class="nav-center">
                 <a href="index.html" class="nav-link">Home</a>
                 <div class="dropdown">
                     <button class="nav-link dropdown-btn">Products ▼</button>
                     <div class="dropdown-content">
-                        <div class="submenu-container">
-                            <a href="products.html?category=team" class="submenu-trigger">Team Sports <span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=cricket">Cricket</a>
-                                <a href="products.html?sport=football">Football</a>
-                                <a href="products.html?sport=basketball">Basketball</a>
-                                <a href="products.html?sport=volleyball">Volleyball</a>
-                                <a href="products.html?sport=rugby">Rugby</a>
-                                <a href="products.html?sport=baseball">Baseball</a>
-                                <a href="products.html?sport=netball">Netball</a>
-                                <a href="products.html?sport=hockey">Hockey</a>
-                            </div>
-                        </div>
-                        <div class="submenu-container">
-                            <a href="products.html?category=running" class="submenu-trigger">Running & Fitness <span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=gym">GYM & Fitness</a>
-                                <a href="products.html?sport=yoga">Yoga</a>
-                                <a href="products.html?sport=swimming">Swimming</a>
-                            </div>
-                        </div>
-                        <div class="submenu-container">
-                            <a href="products.html?category=board" class="submenu-trigger">Board Games <span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=chess">Chess</a>
-                                <a href="products.html?sport=daam">Daam</a>
-                                <a href="products.html?sport=carrom">Carrom</a>
-                                <a href="products.html?sport=scrabble">Scrabble</a>
-                            </div>
-                        </div>
-                        <div class="submenu-container">
-                            <a href="products.html?category=athletic" class="submenu-trigger">Athletic Sports<span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=hammer">Hammer Throw</a>
-                                <a href="products.html?sport=medals">Medals</a>
-                                <a href="products.html?sport=relay">Relay</a>
-                                <a href="products.html?sport=discus">Discus</a>
-                            </div>
-                        </div>
-                        <div class="submenu-container">
-                            <a href="products.html?category=racket" class="submenu-trigger">Racket Sports <span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=tennis">Tennis</a>
-                                <a href="products.html?sport=badminton">Badminton</a>
-                                <a href="products.html?sport=table-tennis">Table Tennis</a>
-                            </div>
-                        </div>
-                        <div class="submenu-container">
-                            <a href="products.html?category=others" class="submenu-trigger">Others <span
-                                    class="arrow">▶</span></a>
-                            <div class="submenu-content">
-                                <a href="products.html?sport=cycling">Cycling</a>
-                                <a href="products.html?sport=skating">Skating</a>
-                                <a href="products.html?sport=boxing">Boxing</a>
-                            </div>
+                        <a href="products.html?category=running">Running</a>
+                        <a href="products.html?category=basketball">Basketball</a>
+                        <a href="products.html?category=soccer">Soccer</a>
+                        <a href="products.html?category=training">Training</a>
+                        <a href="products.html?category=lifestyle">Lifestyle</a>
                     </div>
                 </div>
             </div>
@@ -97,20 +40,18 @@
             <div class="filter-bar">
                 <select id="categoryFilter" onchange="filterProducts()">
                     <option value="">All Categories</option>
-                    <option value="team">Team Sports</option>
-                    <option value="running">Running & Fitness</option>
-                    <option value="board">Board Games</option>
-                    <option value="athletic">Athletic Sports</option>
-                    <option value="racket">Racket Sports</option>
-                    <option value="others">Others</option>
-
+                    <option value="running">Running</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="training">Training</option>
+                    <option value="lifestyle">Lifestyle</option>
                 </select>
                 <select id="priceFilter" onchange="filterProducts()">
                     <option value="">All Prices</option>
-                    <option value="0-100">Under Rs.100</option>
-                    <option value="100-150">Rs.100 - Rs.150</option>
-                    <option value="150-200">Rs.150 - Rs.200</option>
-                    <option value="200+">Rs.200+</option>
+                    <option value="0-100">Under $100</option>
+                    <option value="100-150">$100 - $150</option>
+                    <option value="150-200">$150 - $200</option>
+                    <option value="200+">$200+</option>
                 </select>
             </div>
         </div>
@@ -135,5 +76,4 @@
     <script src="script.js"></script>
     <script src="products.js"></script>
 </body>
-
 </html>

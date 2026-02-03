@@ -133,7 +133,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1630a2 0%, #2f414f 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--secondary-color);
     padding: 8rem 2rem;
     text-align: center;
@@ -221,7 +221,7 @@ body {
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     position: relative;
     display: flex;
     align-items: center;
@@ -632,87 +632,4 @@ body {
     .tab-btn {
         flex: 0 1 50%;
     }
-}
-
-/* Position the main dropdown relative to the nav */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Show main dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Submenu Container Positioning */
-.submenu-container {
-    position: relative;
-}
-
-/* The fly-out menu (Cricket, etc.) */
-.submenu-content {
-    display: none;
-    position: absolute;
-    left: 100%; /* Positions it to the right of the main menu */
-    top: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.1);
-}
-
-/* Show Submenu on Hover */
-.submenu-container:hover .submenu-content {
-    display: block;
-}
-
-/* Styling for links and arrows */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.arrow {
-    float: right;
-    font-size: 10px;
-    margin-left: 10px;
-}
-
-img{
-    width:100%;
-    height:100%;
-}
-
-
-.product-image-container {
-    width: 100%;
-    height: 50%; 
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-}
-
-
-.product-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; 
-    padding: 10px; 
 }
