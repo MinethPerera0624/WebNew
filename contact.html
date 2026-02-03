@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sportify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --sportify-black: #000000;
+            --whatsapp-green: #25D366;
+            --insta-pink: #E1306C;
+            --fb-blue: #1877F2;
+            --dark-bg: #1a1a1a;
+            --light-bg: #6cb19a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--light-bg);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .header h1 {
+            color: var(--sportify-black);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .main-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* --- Social & Info Side --- */
+        .sidebar {
+            background: var(--dark-bg);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links h3 {
+            color: var(--sportify-blue);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        /* Hover Colors */
+        .social-item.fb:hover { background: var(--fb-blue); }
+        .social-item.ig:hover { background: var(--insta-pink); }
+        .social-item.wa:hover { background: var(--whatsapp-green); }
+
+        .social-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* --- Form Side --- */
+        .form-content {
+            padding: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: var(--sportify-blue);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .main-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Contact SPORTIFY</h1>
+        <p>Our team is ready to help you gear up.</p>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="sidebar">
+            <h2>Get in Touch</h2>
+            <p style="opacity: 0.7;">Questions about an order? Need help choosing the right ball or racket?</p>
+            
+            <div class="social-links">
+                <h3>Follow the Game</h3>
+                
+                <a href="INSERT_FACEBOOK_LINK_HERE" class="social-item fb">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+
+                <a href="INSERT_INSTAGRAM_LINK_HERE" class="social-item ig">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://wa.me/071-1638873" class="social-item wa">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp Chat</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="form-content">
+            <form action="#">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="email@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Tell us what you need..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -19,14 +19,14 @@ function displayCart() {
         <div class="cart-item">
             <div class="item-info">
                 <h3>${item.name}</h3>
-                <p>$${item.price.toFixed(2)} each</p>
+                <p>Rs.${item.price.toFixed(2)} each</p>
             </div>
             <div class="item-quantity">
                 <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
                 <span>${item.quantity}</span>
                 <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
             </div>
-            <div class="item-price">$${(item.price * item.quantity).toFixed(2)}</div>
+            <div class="item-price">Rs.${(item.price * item.quantity).toFixed(2)}</div>
             <button class="remove-btn" onclick="removeFromCart(${item.id})">✕</button>
         </div>
     `).join('');

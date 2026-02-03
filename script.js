@@ -17,7 +17,7 @@ function addToCart(productName, price) {
         price: price,
         quantity: 1
     };
-    
+
     // Check if item already exists
     const existingItem = cart.find(i => i.name === productName);
     if (existingItem) {
@@ -25,10 +25,10 @@ function addToCart(productName, price) {
     } else {
         cart.push(item);
     }
-    
+
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
-    
+
     // Show notification
     showNotification(`${productName} added to cart!`);
 }
@@ -38,7 +38,7 @@ function removeFromCart(itemId) {
     cart = cart.filter(item => item.id !== itemId);
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
-    
+
     // Reload cart display if on cart page
     if (window.location.pathname.includes('cart.html')) {
         displayCart();
@@ -51,7 +51,7 @@ function updateQuantity(itemId, quantity) {
     if (item) {
         item.quantity = Math.max(1, quantity);
         localStorage.setItem('cart', JSON.stringify(cart));
-        
+
         if (window.location.pathname.includes('cart.html')) {
             displayCart();
         }
@@ -65,7 +65,7 @@ function showNotification(message) {
         position: fixed;
         top: 20px;
         right: 20px;
-        background-color: #4caf50;
+        background-color: #6e4bb0;
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 4px;
@@ -74,11 +74,11 @@ function showNotification(message) {
     `;
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = 'slideOut 0.3s ease-in-out';
-        setTimeout(() => notification.remove(), 300);
-    }, 3000);
+        setTimeout(() => notification.remove(), 200);
+    }, 2000);
 }
 
 // Checkout function
@@ -87,9 +87,9 @@ function checkout() {
         alert('Your cart is empty!');
         return;
     }
-    
+
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    
+
     const orderDetails = {
         orderId: 'ORD-' + Date.now(),
         items: cart,
@@ -97,35 +97,35 @@ function checkout() {
         date: new Date().toLocaleDateString(),
         status: 'Completed'
     };
-    
+
     // Save order to localStorage
     let orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(orderDetails);
     localStorage.setItem('orders', JSON.stringify(orders));
-    
+
     // Clear cart
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
-    
-    alert(`Order placed successfully! Order ID: ${orderDetails.orderId}\nTotal: $${total.toFixed(2)}`);
+
+    alert(`Order placed successfully! Order ID: ${orderDetails.orderId}\nTotal: Rs.${total.toFixed(2)}`);
     window.location.href = 'index.html';
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateCartCount();
-    
+
     // Add animation styles
     const style = document.createElement('style');
     style.textContent = `
         @keyframes slideIn {
             from {
-                transform: translateX(400px);
+                transform: translateX(500px);
                 opacity: 0;
             }
             to {
-                transform: translateX(0);
+                transform: translateX(0px);
                 opacity: 1;
             }
         }
@@ -143,3 +143,4 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 });
+

@@ -15,6 +15,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top right, #39b5a9, #7fc655),
+        radial-gradient(circle at bottom left, #4bbe7b, #ffffff);
     color: var(--text-color);
     line-height: 1.6;
 }
@@ -143,6 +145,35 @@ body {
     justify-content: center;
 }
 
+.hero {
+    /* Replace the URL with your actual image file path */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://getwallpapers.com/wallpaper/full/e/5/d/129761.jpg');
+
+    /* Ensures the image covers the entire area */
+    background-size: cover;
+
+    /* Keeps the image centered */
+
+
+    /* Prevents the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Makes the section tall enough to show the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgba(129, 145, 37, 0.553);
+}
+
+/* Optional: Add a slight parallax effect */
+@media (min-width: 1024px) {
+    .hero {
+        background-attachment: fixed;
+    }
+}
+
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -152,6 +183,7 @@ body {
 .hero-content p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    color: var(--secondary-color);
 }
 
 /* Buttons */
@@ -645,7 +677,7 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -663,11 +695,12 @@ body {
 .submenu-content {
     display: none;
     position: absolute;
-    left: 100%; /* Positions it to the right of the main menu */
+    left: 100%;
+    /* Positions it to the right of the main menu */
     top: 0;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 8px 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 /* Show Submenu on Hover */
@@ -693,15 +726,15 @@ body {
     margin-left: 10px;
 }
 
-img{
-    width:100%;
-    height:100%;
+img {
+    width: 100%;
+    height: 100%;
 }
 
 
 .product-image-container {
     width: 100%;
-    height: 50%; 
+    height: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -713,6 +746,7 @@ img{
 .product-img {
     width: 100%;
     height: 100%;
-    object-fit: contain; 
-    padding: 10px; 
+    object-fit: contain;
+    padding: 10px;
 }
+
